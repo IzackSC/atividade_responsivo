@@ -168,22 +168,34 @@ footer > .container {
     .container {
         max-width: 90%;
     }
-
+    
     header .container-flex {
         display: flex;
     }
-
+    
     main .container-flex {
         display: block;
     }
-
-    #itens .container-flex {
+    
+    #itens .container .container-flex {
         align-items: center;
-    }
-
-    main img {
-        width: 100%;
-        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
     }
     
+    #itens .container .container-flex > * {
+        flex: 1 0 calc(50% - 20px); 
+        max-width: calc(50% - 20px);  
+        box-sizing: border-box;   
+        margin-bottom: 20px;     
+        align-self: center; 
+        
+    }
+    
+    main img {
+        width: 100%; 
+        height: auto;
+
+    }
 }
